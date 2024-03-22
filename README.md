@@ -3,8 +3,6 @@
 
 [Releases](https://github.com/gingajamie/smapi-better-sprinklers-plus-encore/releases/)
 
-[On Nexus mods](https://www.nexusmods.com/stardewvalley/mods/17767)
-
 A fork of [Better Sprinklers Plus (by JamesCodesThings)](https://www.nexusmods.com/stardewvalley/mods/17767)
 which itself is a fork of [Better Sprinklers by Maurício Gomes (Speeder)](http://www.nexusmods.com/stardewvalley/mods/41).
 
