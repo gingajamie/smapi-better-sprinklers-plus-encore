@@ -136,7 +136,7 @@ namespace BetterSprinklersPlus
       {
         Logger.Verbose($"Sprinkler at {tile.X}x{tile.Y} activated");
         ActivateSprinkler(Game1.currentLocation, tile, obj);
-        Game1.addHUDMessage(new HUDMessage($"Sprinkler Activated", Color.Green, 5000f));
+        Game1.addHUDMessage(new HUDMessage($"Sprinkler Activated", 5000f));
         return;
       }
 
@@ -147,14 +147,14 @@ namespace BetterSprinklersPlus
       if (BetterSprinklersPlusConfig.Active.CannotAfford == (int)BetterSprinklersPlusConfig.CannotAffordOptions.DoNotWater && Game1.player.Money < cost)
       {
         Logger.Warn($"Player tried to activate sprinkler but it was too expensive ({cost}G) > {Game1.player.Money}");
-        Game1.addHUDMessage(new HUDMessage($"Can't run sprinkler, it will cost too much ({cost}G)", Color.Green, 5000f));
+        Game1.addHUDMessage(new HUDMessage($"Can't run sprinkler, it will cost too much ({cost}G)", 5000f));
         return;
       }
 
       Logger.Verbose($"Sprinkler at {tile.X}x{tile.Y} activated ({cost}G)");
       ActivateSprinkler(Game1.currentLocation, tile, obj);
       DeductCost(cost);
-      Game1.addHUDMessage(new HUDMessage($"Sprinkler Activated ({cost}G)", Color.Green, 5000f));
+      Game1.addHUDMessage(new HUDMessage($"Sprinkler Activated ({cost}G)", 5000f));
     }
 
     /// <summary>
@@ -186,7 +186,7 @@ namespace BetterSprinklersPlus
         Logger.Verbose("Balanced mode is off, just water");
         if (BetterSprinklersPlusConfig.Active.BalancedModeCostMessage)
         {
-          Game1.addHUDMessage(new HUDMessage("Your sprinklers have run.", Color.Green, 5000f));
+          Game1.addHUDMessage(new HUDMessage("Your sprinklers have run.", 5000f));
         }
 
         WaterAll();
@@ -203,8 +203,7 @@ namespace BetterSprinklersPlus
         Logger.Verbose("Do not water is set, unwatering.");
         if (BetterSprinklersPlusConfig.Active.BalancedModeCostMessage || BetterSprinklersPlusConfig.Active.BalancedModeCannotAffordWarning)
         {
-          Game1.addHUDMessage(new HUDMessage($"You could not to run your sprinklers today ({cost}G).",
-            Color.Green, 5000f));
+          Game1.addHUDMessage(new HUDMessage($"You could not to run your sprinklers today ({cost}G).", 5000f));
         }
 
         return;
@@ -216,7 +215,7 @@ namespace BetterSprinklersPlus
       Logger.Verbose($"Sprinklers have run ({cost}G).");
       if (BetterSprinklersPlusConfig.Active.BalancedModeCostMessage && cost > 0)
       {
-        Game1.addHUDMessage(new HUDMessage($"Your sprinklers have run ({cost}G).", Color.Green, 5000f));
+        Game1.addHUDMessage(new HUDMessage($"Your sprinklers have run ({cost}G).", 5000f));
       }
     }
 
@@ -246,7 +245,7 @@ namespace BetterSprinklersPlus
       BetterSprinklersPlusConfig.Active.SprinklerShapes.TryGetValue(type, out var grid);
       if (grid == null) return;
 
-      sprinkler.ApplySprinklerAnimation(location);
+      sprinkler.ApplySprinklerAnimation();
 
       sprinkler.ForAllTiles(tile, t =>
       {

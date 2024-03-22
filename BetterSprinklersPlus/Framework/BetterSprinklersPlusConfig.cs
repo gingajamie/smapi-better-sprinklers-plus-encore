@@ -181,7 +181,7 @@ namespace BetterSprinklersPlus.Framework
     public static void SaveChanges()
     {
       Helper.WriteConfig(Active);
-      Game1.addHUDMessage(new HUDMessage("Sprinkler Configurations Saved", Color.Green, 3500f));
+      Game1.addHUDMessage(new HUDMessage("Sprinkler Configurations Saved"));
     }
 
     public static void UpdateMaxCoverage(BetterSprinklersPlusConfig config, int sprinklerId, string value) {
