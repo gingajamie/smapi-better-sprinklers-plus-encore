@@ -1,4 +1,4 @@
-﻿# Better Sprinklers Plus Encore
+﻿# Better Sprinklers Plus
 [Releases](https://github.com/gingajamie/smapi-better-sprinklers-plus-encore/releases/)
 
 A fork of [Better Sprinklers Plus (by JamesCodesThings)](https://www.nexusmods.com/stardewvalley/mods/17767)
@@ -151,7 +151,7 @@ __Use:__ Changes the hotkey to show coverage overlay.
 Alternatively, you can use [Data Layers](https://www.nexusmods.com/stardewvalley/mods/1691) to show coverage of sprinklers, scarecrows, and much more.
 
 # Compatibility
-Better Sprinklers Plus Encore is compatible with Stardew Valley 1.6+ on Linux/Mac/Windows, both single-player and multiplayer.
+Better Sprinklers Plus is compatible with Stardew Valley 1.6+ on Linux/Mac/Windows, both single-player and multiplayer.
 
 If two players have the mod installed in multiplayer, both ranges will apply.
 
