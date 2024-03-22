@@ -201,8 +201,8 @@ namespace BetterSprinklersPlus.Framework
         new Rectangle(x, y, _tileSize - Padding * 2, _tileSize - Padding * 2),
         Game1.getSourceRectForStandardTileSheet(Game1.objectSpriteSheet, _activeSprinklerSheet, 16, 16),
         Color.White);
-      
-      // Draw the ok button
+
+      // Draw the ok and reset buttons
       _okButton.draw(Game1.spriteBatch);
       _resetButton.draw(Game1.spriteBatch);
 
