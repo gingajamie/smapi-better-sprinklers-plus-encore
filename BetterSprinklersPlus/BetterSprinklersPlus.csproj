@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <GamePath Condition="'$(GAME_PATH)' != ''">$(GAME_PATH)</GamePath>
-    <RootNamespace>BetterSprinklersPlusEncore</RootNamespace>
+    <RootNamespace>BetterSprinklersPlus</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
