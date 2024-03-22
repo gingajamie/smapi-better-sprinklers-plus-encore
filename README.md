@@ -1,6 +1,4 @@
-﻿# Better Sprinklers Updated
-![Build and Release](https://github.com/gingajamie/smapi-better-sprinklers-plus-encore/actions/workflows/build.yml/badge.svg)
-
+﻿# Better Sprinklers Plus Encore
 [Releases](https://github.com/gingajamie/smapi-better-sprinklers-plus-encore/releases/)
 
 A fork of [Better Sprinklers Plus (by JamesCodesThings)](https://www.nexusmods.com/stardewvalley/mods/17767)
