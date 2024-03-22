@@ -96,7 +96,7 @@ namespace BetterSprinklersPlus.Framework
     /// </summary>
     public int DefaultTiles { get; set; } = (int)DefaultTilesOptions.CostMoney;
     public int CannotAfford { get; set; } = (int)CannotAffordOptions.DoNotWater;
-    public int SprinklerCooldown { get; set; } = 60;
+    public int SprinklerCooldown { get; set; } = 30;
     public bool BalancedModeCostMessage { get; set; } = true;
     public bool BalancedModeCannotAffordWarning { get; set; } = true;
 

@@ -266,7 +266,14 @@ namespace BetterSprinklersPlus
           ActivateSprinkler(location, tile, sprinkler);
           // Save sprinkler activation to dict using location + type as key.
           var key = sprinkler.TileLocation.ToString() + "_" + sprinkler.QualifiedItemId;
-          _sprinklerActivations.Add(key, Tuple.Create(sprinkler, DateTime.Now));
+          if (_sprinklerActivations.ContainsKey(key))
+          {
+            _sprinklerActivations[key] = Tuple.Create(sprinkler, DateTime.Now);
+          }
+          else
+          {
+            _sprinklerActivations.Add(key, Tuple.Create(sprinkler, DateTime.Now));
+          }
         }
       }
     }
