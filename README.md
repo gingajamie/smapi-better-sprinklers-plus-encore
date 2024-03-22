@@ -1,16 +1,16 @@
 ﻿# Better Sprinklers Updated
-![Build and Release](https://github.com/jamescodesthings/smapi-better-sprinklers/actions/workflows/build.yml/badge.svg)
+![Build and Release](https://github.com/gingajamie/smapi-better-sprinklers-plus-encore/actions/workflows/build.yml/badge.svg)
 
-[Releases](https://github.com/jamescodesthings/smapi-better-sprinklers/releases/)
+[Releases](https://github.com/gingajamie/smapi-better-sprinklers-plus-encore/releases/)
 
 [On Nexus mods](https://www.nexusmods.com/stardewvalley/mods/17767)
 
-A fork of [Better Sprinklers by Maurício Gomes (Speeder)](http://www.nexusmods.com/stardewvalley/mods/41).
+A fork of [Better Sprinklers Plus (by JamesCodesThings)](https://www.nexusmods.com/stardewvalley/mods/17767)
+which itself is a fork of [Better Sprinklers by Maurício Gomes (Speeder)](http://www.nexusmods.com/stardewvalley/mods/41).
 
 Sprinklers, but better.
 
-Originally by Maurício Gomes (Speeder), maintained by [JamesCodesThings](https://codesthings.com).
-
+Originally by Maurício Gomes (Speeder), subsequently maintained by [JamesCodesThings](https://codesthings.com), updated for SDV 1.6 by gingajamie.
 
 
 # Contents
@@ -125,6 +125,10 @@ __Off:__ No coverage is shown.
 
 This is useful if you only want to use Data Layers.
 
+## Sprinkler Cooldown (seconds)
+
+This is used to avoid sprinkler animation overlap when a sprinkler is activated multiple times within quick succesion. Default value of 60 seconds.
+
 ## Show Config Key
 __Use:__ Changes the hotkey to change sprinkler configuration.
 
@@ -151,183 +155,23 @@ __Use:__ Changes the hotkey to show coverage overlay.
 Alternatively, you can use [Data Layers](https://www.nexusmods.com/stardewvalley/mods/1691) to show coverage of sprinklers, scarecrows, and much more.
 
 # Compatibility
-Better Sprinklers is compatible with Stardew Valley 1.3+ on Linux/Mac/Windows, both single-player and multiplayer.
+Better Sprinklers Plus Encore is compatible with Stardew Valley 1.6+ on Linux/Mac/Windows, both single-player and multiplayer.
 
 If two players have the mod installed in multiplayer, both ranges will apply.
 
-Some mod incompatibilities have been observed, particularly mods that change sprinkler behaviour.
-
-It's out of scope of my aims to improve this. But, I'll happily accept and consider checking out bug reports.
-
-# Roadmap
-- [x] (balancing) Option: Do not sprinkle tiles if we run out of money.
-- [x] (balancing) Option: Don't water if we can't afford vs Cut out.
-- [x] (ui) Message: When watering is skipped/cut out, warn the user
-  - [x] Option to enable/disable (using main option)
-- [x] Update Mod Screenshots
-- [x] (immersion) Same bills cutout with default tiles?
-- [x] (ui) Click & Drag to change multiple tiles quickly
-- [x] (ui) Live Preview of costs on config menu
-- [x] (gameplay) Ability to change maximum range of each sprinkler type.
-- [x] (gameplay) Ability to remove default tiles.
-- [x] (ui) Don't draw tile on center tile.
-- [x] (ui) Add reset button to Sprinkler edit menu.
-- [x] (balancing) Quality and Iridium sprinklers should cost less.
-- [x] (balancing) Pressure Nozzle should cut cost/do something!
-- [x] (fix) Overlapping Sprinkler Range issue 
-  - (One Sprinkler unwatering another sprinkler's tiles).
-- [x] (gamplay) Ability to activate one or all sprinklers manually (same cost).
-- [x] (fix) rainy day unwatering
-  - Only unwater on default tiles
-  - Do not unwater in the rain
-- [x] (fix) Do not activate sprinklers if the menu is open
-- [x] (fix) Error during launch reported by Chargoal
-- [x] (balancing) Default tiles are free Option, suggested by MicomiBite
-- [x] (fix) Greenhouse watering/unwatering, reported by hiew32
-- [x] (balancing) Default tile count is free, suggested by MicomiBite
-- [x] (fix) Clicking the sprinkler in the edit menu adds an extra tile.
-- [ ] (multiplayer) Make Master Game responsible for Sprinkler Coverage setting?
-- [ ] (ui) Add ability to open coverage menu from config menu?
-- [ ] (accessibility) i18n basics.
-
 # Versions
-## 2.17.2
-- Changelog update only.
-
-## 2.17.1
-- fix: Clicking the sprinkler in the edit menu adds an extra tile.
-
-## 2.17.0
-- feat: Default tile count is free, suggested by MicomiBite
-
-## 2.16.1
-- fix: Greenhouse watering/unwatering, reported by hiew32.
-
-## 2.16.0
-- docs: deprecate notice about DataLayers, as the PR has been merged!
-
-## 2.15.4
-- fix: Error during game launch reported by Chargoal
-
-## 2.15.3
-- fix: Do not activate sprinklers on click/check if the menu is open
-- fix: Do not activate sprinklers on click/check if an event is active
-
-## 2.15.2
-- fix: unwatering in the rain no longer happens
-- refactor(perf): only unwater default tiles
-- gameplay: If it's raining, don't run sprinklers or cost
-
-## 2.15.0
-- Add Feature: Activate Sprinklers
-
-## 2.14.1
-- FIX Overlapping Sprinkler Range Issue
-
-## 2.14.0
-- ADD Pressure Nozzle Halves cost of sprinkler
-
-## 2.13.0
-- ADD ability to remove default tiles
-- REFACTOR rename SprinklerShapeEditMenu to CoverageEditMenu
-- ADD Do not draw center tile in menus
-- ADD Menu to reset to default sprinkler coverage (Cross to the left of OK)
-- RENAME Max Coverage to "Range"
-- REFACTOR Logger to singleton service
-- REFACTOR CoverageEditMenu.draw() to use for loop instead of while to avoid inf-looping.
-- TRY ADD Pressure nozzle halves cost of sprinkler (does not work yet).
-
-## 2.11.0
-- Add ability to change the maximum range of each sprinkler type
-
-## 2.10.1
-- Fix Showing cost on menu
-- Fix click & drag to toggle
-- Fix viewport zoom scale
-- Fix Generic Mod Config Menu
-
-## 2.10.0
-- First hack at showing cost on menu.
-- Fix shift key on click/drag.
-
-## 2.9.0
-- First hack at click & drag to toggle multiple squares at once.
-
-## 2.8.9
-- Refactor RunSprinklers method so it's easier to modify and follow.
-- Remove CutOut option, feels unnecessary
-- Remove Grid on placement
-- Clean up and bugfix where it makes sense to.
-- Rename BetterSprinklers to BetterSprinklersPlus everywhere
-
-## 2.8.0
-- Add options for what happens when you cannot afford to run the sprinklers
-- Update readme
-
-## 2.7.1
-- Update Documentation.
-- Don't show sprinkler cost if `cost = 0`
-
-## 2.7.0
-- Gut the old Balanced Mode
-- ADD a per-day cost for water, water costs money.
-- ADD do not sprinkle tiles if we run out of money for water.
-- ADD Options to change difficulty and turn on/off these features
-
-## 2.6.15
-- Cleanup the config menu
-
-## 2.6.14
-- Fix divide by zero error (caused by me)
-- Improve config options for coverage based balance
-- Update default config options to match what (should?) be the default multipliers
-
-## 2.6.13
-- Add a copy of Data Layers with integration
-- Raised PR with Data Layers to add support
-
-## 2.6.12
-- Moved to CI
-- Fix Controller placement tile overlay
-
-## 2.6.3 - 2.6.11
-- Bug fixes and CI testing
-
-## 2.6.2
-- Fix placement overlay when switching from mouse to controller
-
-## 2.6.1
-- Add Support for [Generic Mod Config Menu](https://github.com/spacechase0/StardewValleyMods/tree/develop/GenericModConfigMenu)
-  - Add config option for each price multiplier
-  - Add config option for showing/hiding the grid on highlight
-  - Add Keybind Changes
-
-## 2.6.0
-
-- Update to `.Net 5`
-- Update License to MIT for this fork.
-- Update Pathoschild.Stardew.ModBuildConfig to `4.1.1`
-- Change TargetPlatform to `Any CPU`
-- `SMAPI 4` compatibility:
-  - Update `SprinklerMod.cs` to use `Content Interception API`
-  - Update `SprinklerMod.cs` to use `helper.GameContent.Load`
-  - Update `SprinklerMod.cs` to use `helper.GameContent.InvalidateCache`
+## 2.18.0
+- Update to `.Net 6`
+- Added sprinkler cooldown logic to avoid overlapping of sprinkler animations if a sprinkler is activated in quick succession. Configurable via settings.
 
 # Motivation
-A fork of [Better Sprinklers by Maurício Gomes (Speeder)](http://www.nexusmods.com/stardewvalley/mods/41).
+A fork of [Better Sprinklers Plus (by JamesCodesThings)](https://www.nexusmods.com/stardewvalley/mods/17767)
+which itself is a fork of [Better Sprinklers by Maurício Gomes (Speeder)](http://www.nexusmods.com/stardewvalley/mods/41).
 
-The goal of this fork is to maintain and rebuild the current version of Better Sprinklers.
+My aim here was to bring the Better Sprinklers Plus fork up-to-date with Stardew Valley 1.6.
+This may be a temporary repo whilst awaiting the previous maintainer time to potentially update the existing repo, though they noted they had finished their playthrough which inspired them to work on the Better Sprinklers Plus mod.
 
-The original developer has understandably lost touch with the mod.
-
-I was starting a modded playthrough and loved the mod, but noticed some bugs shared by the wider community.
-
-I decided to pick up the torch while I'm playing Stardew and give a little back.
-I'm Updating the mod, fixing the bugs I'm aware of, and adding some features I'd like to see.
-
-**r/iama:** Senior Software Engineer in the midlands in the UK. A loving father and when the kids are asleep I get a chance to play some games.
-
-You can find more about me at [CodesThings.com](https://codesthings.com).
+Will happily add small features if requested and fix bugs.
 
 # Found a Bug?
-Please report it in [Github Issues](https://github.com/jamescodesthings/smapi-better-sprinklers/issues).
+Please report it in [Github Issues](https://github.com/gingajamie/smapi-better-sprinklers-plus-encore/issues).
