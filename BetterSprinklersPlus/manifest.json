@@ -1,10 +1,10 @@
 {
-  "Name": "Better Sprinklers Plus Encore",
+  "Name": "Better Sprinklers Plus",
   "Author": "JamesCodesThings + gingajamie",
   "Version": "2.18.0",
-  "Description": "Sprinklers, but better, with an encore.",
-  "UniqueID": "com.gingajamie.BetterSprinklersPlusEncore",
-  "EntryDll": "BetterSprinklersPlusEncore.dll",
+  "Description": "Sprinklers, but better.",
+  "UniqueID": "com.gingajamie.BetterSprinklersPlus",
+  "EntryDll": "BetterSprinklersPlus.dll",
   "MinimumApiVersion": "3.0.0",
   "UpdateKeys": []
 }
